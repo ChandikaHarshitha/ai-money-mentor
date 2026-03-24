@@ -16,3 +16,33 @@ Clean and easy-to-use interface for better user experience
 Frontend: HTML, CSS, JavaScript
 Backend: Node.js (Express)
 API: Simple REST API used to simulate AI-based responses
+
+## How It Works
+1. User enters financial details
+2. System calculates financial health score
+3. User asks financial questions
+4. Backend processes query and returns suggestions
+
+---
+
+## Impact
+- Helps users understand financial planning
+- Saves time spent on financial decision-making
+- Makes investment knowledge accessible to everyone
+
+---
+
+## Future Improvements
+- Real AI integration (OpenAI/Gemini)
+- Data visualization (charts & graphs)
+- User authentication system
+
+---
+
+## 🎥 Demo
+Prototype demonstration included in submission video.
+
+---
+
+## 🙌 Conclusion
+AI Money Mentor aims to democratize financial advice by making it simple, fast, and accessible for everyone.
