@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Money Mentor</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(120deg, #4facfe, #00f2fe);
+      text-align: center;
+    }
+
+    .container {
+      width: 380px;
+      margin: 50px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    h1 {
+      color: #222;
+    }
+
+    input {
+      width: 90%;
+      padding: 8px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 95%;
+      padding: 8px;
+      margin-top: 10px;
+      background: #4facfe;
+      color: white;
+      border: none;
+      border-radius: 6px;
+    }
+
+    #result {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    #answer {
+      margin-top: 10px;
+      background: #f1f1f1;
+      padding: 8px;
+      border-radius: 6px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>AI Money Mentor</h1>
+
+<input id="income" placeholder="Monthly Income">
+<br><br>
+
+<input id="expenses" placeholder="Monthly Expenses">
+<br><br>
+
+<input id="savings" placeholder="Savings">
+<br><br>
+
+<button onclick="analyze()">Analyze</button>
+
+<div id="result"></div>
+
+<br>
+
+<input id="question" placeholder="Ask about investment or tax">
+<br><br>
+
+<button onclick="askAI()">Ask AI</button>
+
+<div id="answer"></div>
+
+</div>
+
+<script>
+
+function analyze() {
+
+  let income = document.getElementById("income").value;
+  let savings = document.getElementById("savings").value;
+
+  if (income == "" || income == 0) {
+    alert("Enter valid income");
+    return;
+  }
+
+  let score = (savings / income) * 100;
+
+  let message = "";
+  let color = "";
+
+  if (score > 30) {
+    message = "Excellent financial health";
+    color = "green";
+  }
+  else if (score > 10) {
+    message = "Good, improve savings";
+    color = "orange";
+  }
+  else {
+    message = "Low savings, plan better";
+    color = "red";
+  }
+
+  let resultBox = document.getElementById("result");
+
+  resultBox.innerText =
+    "Score: " + score.toFixed(2) + "% - " + message;
+
+  resultBox.style.color = color;
+}
+function askAI() {
+
+  let answerBox = document.getElementById("answer");
+
+  answerBox.innerText = "Analyzing...";
+
+  setTimeout(() => {
+
+    let q = document.getElementById("question").value.toLowerCase();
+
+    let reply = "";
+
+    if (q.includes("invest")) {
+      reply = "Start SIP and diversify investments";
+    }
+    else if (q.includes("tax")) {
+      reply = "Use 80C, ELSS and NPS to save tax";
+    }
+    else {
+      reply = "Save regularly and control expenses";
+    }
+
+    answerBox.innerText = reply;
+
+  }, 1500);
+}
+
+</script>
+
+</body>
+</html>
