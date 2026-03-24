@@ -1,4 +1,4 @@
-# ai-money-mentor
+# Ai-Money-Mentor
 
 📌 Overview
 
