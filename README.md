@@ -16,15 +16,3 @@ Clean and easy-to-use interface for better user experience
 Frontend: HTML, CSS, JavaScript
 Backend: Node.js (Express)
 API: Simple REST API used to simulate AI-based responses
-
-🧩 Project Structure
-ai-money-mentor/
-│
-├── frontend/
-│ └── index.html
-│
-├── backend/
-│ └── server.js
-│
-├── package.json
-└── README.md
